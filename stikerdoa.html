@@ -1,0 +1,119 @@
+<html>
+    <head>
+         <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <title>Toko Resmi Secil Mainan - Flashcard</title>
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="row my-2 pt-1 justify-content-bentween align-items-center">
+                <div class="col-xl-6 col-sm-6 col-xs-6">
+                    <a href="index.html">
+                        <img class="img-fluid" src="gambar/icon/back.png" alt="Poster" style="height: 50px;">
+                    </a>
+                <span class="align-middle" style="font-size: 1.5rem;font-weight: bold;">Stiker Doa Anak Muslim</span>
+                </div>
+                <div class="col-lg-3 col-sm-3 col-6 pt-1">
+                    <a href="https://shopee.co.id/shop/231253526/search?shopCollecitiom=26097449" target="_BLANK">
+                        <img class="img-fluid" src="gambar/icon/shopee.png">
+                    </a>
+                </div>
+                <div class="col-lg-3 col-sm-3 col-6 pt-1">
+                    <a href="https://www.tokopedia.com/secilmainan/etalase/poster-anak" target="_BLANK">
+                        <img class="img-fluid" src="gambar/icon/tokped.png">
+                    </a>
+                </div>
+            </div>
+        <div class="row my-2 justify-content-bentween align-items-center">
+            <div class="container-fluid">
+                <div id="output">
+                    <div class="row">
+                        <div class="col-xl-3 col-sm-3 col-6 text-center product-card">
+                            <a href="detailstikerdoa.html" id="btn-detail" onclick="showItem(1)" class="list-product">
+                                <div class="product-wrapper ">
+                                    <div class="product-img">
+                                        <img class="img-fluid" src="gambar/gambarproduk/stikerdoa.jpg">
+                                    </div>
+                                    <div class="product-content text-center">
+                                        <p class="text-danger"> Stiker Doa Anak Muslim</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-xl-3 col-sm-3 col-6 text-center product-card">
+                            <a href="detailspesifikasidoa.html" id="btn-detail" onclick="showItem(2)" class="list-product">
+                                <div class="product-wrapper ">
+                                    <div class="product-img">
+                                        <img class="img-fluid" src="gambar/gambarproduk/kelengkapanstiker.jpg">
+                                    </div>
+                                <div class="product-content text-center">
+                                    <p class="text-danger"> kelengkapan Stiker Do'a Anak Muslim </p>
+                                </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="fixed-bottom bg-light">
+            <div class="container">
+                <p class="m-0 text-center text-dark">Copyright © 2020 Solite Kids</p>
+            </div>
+        </footer>
+
+        <div class="modal" id="modalFrom" data-backdrop="static">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body pt-3">
+                        <div class="row align-middle">
+                            <div class="col-2 my-auto">
+                                <a href="#">
+                                    <img style="max-height: 50px;" data-dismiss="modal" aria-label="Close" src="gambar/icon/back.png" alt="Poster">
+                                </a>
+                            </div>
+                            <div class="row pt-3">
+                                <div class="col-lg-5 col-sm-5 col-5">
+                                    <img src(unknown) class="img-fluid" id="image">
+                                    <h3 id="harga" class="harga-detail text center">
+                                    </h3>
+                                </div>
+                                <div class="col-lg-7 col-sm-7 col-7">
+                                    <p id="deskripsi"></p>
+                                    <div class="px-2 text-center">
+                                        <a href="#" class="btn-beli" id="shopee" style="background-color: #f8492f; target="_BLANK">
+                                            <img src="gambar/icon/shopee.png" style="height: 20px;">
+                                            "Beli Sekarang"
+                                        </a>
+                                        <a href="#" class="btn-beli" id="tokped" style="background-color: #4f9d4e;" target="_BLANK">
+                                            <img src="gambar/icon/tokped.png" style="height: 20px;">
+                                            " Beli Sekarang"
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="js/query.min.js"></script>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/flascrad.js"></script>
+        <script>
+            function showItem(id){
+                localStorage.setItem("produkId",id);
+                localStorage.setItem("jenis","flashcrad");
+
+                window.location.href = "detail.html"
+            }
+
+        </script>
+        </div>
+    </body>
+</html>

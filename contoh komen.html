@@ -1,0 +1,137 @@
+<ul class="list-unstyled">
+  <li class="media">
+    <img src="gambar4.jpg" class="mr-3" alt="..." style="width: 80px">
+    <div class="media-body">
+      <h5 class="mt-0 mb-1">Komentar 1</h5>
+     contoh media list. pura-pura nya ini adalah kolom komentar pertama dari user. belajar bootstrap 4 di www.malasngoding.com
+    </div>
+  </li>
+  <li class="media my-4">
+    <img src="gambar/gambarproduk/logo-utm-baru-warna.png" class="mr-3" alt="..." style="width: 80px">
+    <div class="media-body">
+      <h5 class="mt-0 mb-1">Komentar 2</h5>
+     contoh media list. pura-pura nya ini adalah kolom komentar kedua dari user. belajar bootstrap 4 di www.malasngoding.com
+    </div>
+  </li>
+  <li class="media">
+    <img src="gambar4.jpg" class="mr-3" alt="..." style="width: 80px">
+    <div class="media-body">
+      <h5 class="mt-0 mb-1">Komentar 3</h5>
+     contoh media list. pura-pura nya ini adalah kolom komentar ketiga dari user. belajar bootstrap 4 di www.malasngoding.com
+    </div>
+  </li>
+  <li class="media my-4">
+    <img src="gambar4.jpg" class="mr-3" alt="..." style="width: 80px">
+    <div class="media-body">
+      <h5 class="mt-0 mb-1">Komentar 4</h5>
+     contoh media list. pura-pura nya ini adalah kolom komentar keempat dari user. belajar bootstrap 4 di www.malasngoding.com
+    </div>
+  </li>
+</ul>
+
+<div class="media">
+    <img src="gambar/gambarproduk/bagiantubuh.jpg" class="mr-3" alt="..." style="width: 100px">
+    <div class="media-body">
+      <h5 class="mt-0">Media heading</h5>
+      Contoh isi konten media object. Media object bisa digunakan sebagai kolom komentar seperti pada contoh ini. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+   
+      <div class="media mt-3">
+        <a class="mr-3" href="#">
+          <img src="gambar/gambarproduk/poster.png" class="mr-3" alt="..." style="width: 100px">
+        </a>
+        <div class="media-body">
+          <h5 class="mt-0">Media heading</h5>
+          Contoh isi konten media object. Media object bisa digunakan sebagai kolom komentar seperti pada contoh ini. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+  <!DOCTYPE html>
+<html lang=”en”>
+  <head>
+    <meta charset=”utf-8″>
+    <meta http-equiv=”X-UA-Compatible” content=”IE=edge”>
+    <meta name=”viewport” content=”width=device-width, initial-scale=1″>
+    <title>Media Object</title>
+
+    <link href=”css/bootstrap.min.css” rel=”stylesheet”>
+
+  </head>
+  <body>
+    
+    <div class=”container”>
+        <div class=”media”>
+        <a href=”#” class=”pull-left”>
+            <img src="gambar/gambarproduk/alattransportasi.jpg" class=”media-object”/>
+        </a>
+        <div class=”media-body”>
+            <h4 class=”media-heading”>Setuju</h4>
+            <p>Setuju dengan salam 3 jari : Persatuan Indonesia. Pilpres sudah selesai, mari berkarya dengan penuh semangat di bidang kita masing-masing.</p>
+        </div>        
+        </div><!– /media –>
+    </div> <!– /container –>
+
+    <script src=”https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js”></script>
+    <script src=”js/bootstrap.min.js”></script>
+  </body>
+</html>
+
+
+<script>
+  $(document).ready(function(){
+    //Mengirimkan Token Keamanan
+    $.ajaxSetup({
+            headers : {
+                'Csrf-Token': $('meta[name="csrf-token"]').attr('content')
+            }
+        });
+      
+    $('#form_komen').on('submit', function(event){
+      event.preventDefault();
+      let nama_pengirim = $('#nama_pengirim').val();
+      let komen = $('#komen').val();
+      
+      if(nama_pengirim==''){
+          alert("Nama Pengirim Harus disii");
+      } else if(komen==''){
+          alert("Komentar Harus disii");
+      } else {
+          var form_data = $(this).serialize();
+          $.ajax({
+            url:"tambah_komentar.php",
+            method:"POST",
+            data:form_data,
+            success:function(data){
+              $('#form_komen')[0].reset();
+              $('#komentar_id').val('0');
+              load_comment();
+            }, error: function(data) {
+                    console.log(data.responseText)
+                  }
+          })
+      }
+    });
+
+    load_comment();
+
+    function load_comment(){
+      $.ajax({
+        url:"ambil_komentar.php",
+        method:"POST",
+        success:function(data){
+          $('#display_comment').html(data);
+        }, error: function(data) {
+                console.log(data.responseText)
+              }
+      })
+    }
+
+    $(document).on('click', '.reply', function(){
+      var komentar_id = $(this).attr("id");
+      $('#komentar_id').val(komentar_id);
+      $('#nama_pengirim').focus();
+    });
+  });
+</script>

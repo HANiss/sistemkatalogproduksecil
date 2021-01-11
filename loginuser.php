@@ -1,0 +1,59 @@
+<html>
+    <head>
+         <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content>
+        <meta name="author" content>
+        <link href="js/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="http://www.secilmainan.com/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://www.secilmainan.com/css/style.css">
+    <link rel="stylesheet" href="http://www.secilmainan.com/css/lightslider.min.css">
+    <link rel="stylesheet" href="http://www.secilmainan.com/css/lightgallery.min.css">
+    <style type="text/css">.__nuxt-error-page{padding:1rem;background:#f7f8fb;color:#47494e;text-align:center;display:flex;justify-content:center;align-items:center;flex-direction:column;font-family:sans-serif;font-weight:100!important;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;-webkit-font-smoothing:antialiased;position:absolute;top:0;left:0;right:0;bottom:0}.__nuxt-error-page .error{max-width:450px}.__nuxt-error-page .title{font-size:1.5rem;margin-top:15px;color:#47494e;margin-bottom:8px}.__nuxt-error-page .description{color:#7f828b;line-height:21px;margin-bottom:10px}.__nuxt-error-page a{color:#7f828b!important;text-decoration:none}.__nuxt-error-page .logo{position:fixed;left:12px;bottom:12px}</style>
+    <script charset="utf-8" src="/_nuxt/pages/hot-apps.04e6865.js"></script>
+    <script charset="utf-8" src="/_nuxt/pages/new-apps.7a71739.js"></script>
+    <script charset="utf-8" src="/_nuxt/pages/brand/secil.8298daa.js"></script>
+    <script charset="utf-8" src="/_nuxt/pages/brand/secil.8298daa.js"></script>
+    <script charset="utf-8" src="/_nuxt/pages/brand/cermat.c93e555.js"></script>
+    <script charset="utf-8" src="/_nuxt/pages/brand/salak.f5e86a3.js"></script>
+    <script charset="utf-8" src="/_nuxt/pages/brand/rara.061a6b0.js"></script>
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="http://www.secilmainan.com/fonts/fontawesome/css/fontawesome-all.min.css">
+
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <title>Toko Resmi Secil Mainan</title>
+    </head>
+    <body> 
+        <div class="container-fluid">
+            <div class="row my-2 pt-1 justify-content-bentween align-items-center">
+                <div class="col-xl-6 col-sm-6 col-xs-6">
+                    <a href="index.php">
+                        <img class="img-fluid" src="gambar/icon/back.png" alt="Poster" style="height: 50px;">
+                    </a>
+                <span class="align-middle" style="font-size: 1.5rem;font-weight: bold;">Login User Customer</span>
+                </div>
+            </div>
+            <div class="container">
+            <form>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Masukkan Email Anda</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                  </div>
+                  <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Masukkan Password Anda</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1">
+                  </div>
+                  <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Ingat Saya</label>
+                  </div>
+                  <button type="submit" class="btn btn-primary">Login</button>
+              </form>
+            </div>
