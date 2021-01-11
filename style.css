@@ -17,7 +17,7 @@ h1{
  
 .kotak_login{
 	width: 350px;
-	background: rgb(232, 255, 100);
+	background: rgb(233, 233, 232);
 	/*meletakkan form ke tengah*/
 	margin: 80px auto;
 	padding: 30px 20px;
@@ -39,7 +39,7 @@ label{
 }
  
 .tombol_login{
-	background: #eeffe2;
+	background: #37442d;
 	color: white;
 	font-size: 11pt;
 	width: 100%;
